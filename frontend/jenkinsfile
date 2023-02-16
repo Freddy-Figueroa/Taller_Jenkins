@@ -43,7 +43,7 @@ pipeline {
 
     stage('deploy') {
       steps {
-        sh 'docker run -d -p ${container_port}:8888 --name ${container_name} ${image_name}:${tag_image}'
+        sh 'docker run -d -p ${container_port}:8081 --name ${container_name} ${image_name}:${tag_image}'
       }
     }
   }
